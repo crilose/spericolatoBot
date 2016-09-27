@@ -93,7 +93,7 @@ Telegram::Bot::Client.run(token) do |bot|
 #SEZIONE SAGGEZZA
 
 	if message.text.to_s.include?("saggezza")|| message.text.to_s.include?("perla")
-     case Random.rand(1...9)
+     case Random.rand(1...10)
       when 1
       bot.api.send_message(chat_id: message.chat.id, text: 'Io non voglio più vivere solo per fare compagnia! EEEEH...noo...per compagn..ehh')
       when 2
@@ -116,6 +116,8 @@ Telegram::Bot::Client.run(token) do |bot|
       when 8
       bot.api.send_message(chat_id: message.chat.id, text: 'Fumi le tue Lucky Strike e ti réndi conto di quanto le malediraiiih..meglio..le sigaréttéh..tipo qust...aelettronicah..ahhhh')
 
+      when 9
+      bot.api.send_message(chat_id: message.chat.id, text: 'Quando andavo in cantina a préndere il vinooh cantavoo.. pérché avevo paura del buioh..eccoh, sono sémpre uguàlehh..continuohh a bere il vinooh....eeh già...hahhaaa il folle jack...')
       end
     end
 
