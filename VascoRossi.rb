@@ -57,9 +57,9 @@ Telegram::Bot::Client.run(token) do |bot|
 	when 3
 	bot.api.send_message(chat_id: message.chat.id, text: 'EEEEhh siamo quà? Potènziali délinquéntii!')
         when 4
-        bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/ciao.mp3', 'audio/mp3'))
+        bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/ciao.mp3', 'audio/mp3'))
 	when 5
-	bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/tesori.mp3', 'audio/mp3'))
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/tesori.mp3', 'audio/mp3'))
     end
 	end
 
@@ -129,10 +129,23 @@ Telegram::Bot::Client.run(token) do |bot|
 	bot.api.send_message(chat_id: message.chat.id, text: 'Mmaahhhh...eeeeehh..non sapréii')
 	when 3
 	bot.api.send_message(chat_id: message.chat.id, text: 'Ma cioèèèh..ovviaméente noo..mi sémbra paleese..chiarocioèheh..')
-  when 4
-  bot.api.send_message(chat_id: message.chat.id, text: 'Cértamentheeeh..é chiaroo...EEHHH..cérto céertoohh..aaaahhh..')
-  when 4
-  bot.api.send_message(chat_id: message.chat.id, text: 'Maahssolutament...assoluthament...enooohh....eeeh..come pénsi una cossh..similee...')
+        when 4
+        bot.api.send_message(chat_id: message.chat.id, text: 'Cértamentheeeh..é chiaroo...EEHHH..cérto céertoohh..aaaahhh..')
+        when 4
+        bot.api.send_message(chat_id: message.chat.id, text: 'Maahssolutament...assoluthament...enooohh....eeeh..come pénsi una cossh..similee...')
+	end
+	end
+
+	if message.text.to_s.include?("asco")&&message.text.to_s.include?("che")&&message.text.to_s.include?("ne")&&message.text.to_s.include?("pensi")
+	case Random.rand(1...5)
+	when 1
+	bot.api.send_message(chat_id: message.chat.id, text: 'Maahh...guhardaah...' + message.from.first_name + 'ioooh...péénsooh..iooh pensoo?')
+	when 2
+	bot.api.send_message(chat_id: message.chat.id, text: 'Ioo...sono sstoluamnehthe...a favoreee....d accordoohh...insòòmma...siiihhhh')
+	when 3
+	bot.api.send_message(chat_id: message.chat.id, text: 'Ioo..non cgredohhh che.....chéé..nooh non sono d accòòrdooh con téé amicoh mio...ehhh')
+	when 4
+	bot.api.send_message(chat_id: message.chat.id, text: 'Guardh...non sono....neanchege..in gradoo..di pensàààre...cioèèhh, hai capiitooh noo?')
 	end
 	end
 
@@ -153,7 +166,7 @@ Telegram::Bot::Client.run(token) do |bot|
 #SEZIONE COME STAI
 
 if message.text.to_s.include?("asco")
-  if message.text.to_s.include?("come stai")||message.text.to_s.include?("come va")||message.text.to_s.include?("tutto bene")||message.text.include?("come butta")||message.text.to_s.include?("stai bene")|| message.text.to_s.include?("a posto")||message.text.to_s.include?("com'è")||message.text.to_s.include?("ttapposto")
+  if message.text.to_s.include?("ome stai")||message.text.to_s.include?("ome va")||message.text.to_s.include?("utto bene")||message.text.include?("ome butta")||message.text.to_s.include?("stai bene")|| message.text.to_s.include?("a posto")||message.text.to_s.include?("com'è")||message.text.to_s.include?("ttapposto")
     case Random.rand(1...4)
     when 1
     bot.api.send_message(chat_id: message.chat.id, text: 'Eeeeeh....tutto bééne...piuohmhneo.....ahehhhhh')
@@ -195,55 +208,55 @@ end
 if message.text.to_s.include?("eh")||message.text.to_s.include?("urlo")||message.text.to_s.include?("urla")||message.text.to_s.include?("motiva")||message.text.to_s.include?("hh")
   case Random.rand(1...21)
   when 1
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/1.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/1.mp3', 'audio/mp3'))
   when 2
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/2.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/2.mp3', 'audio/mp3'))
   when 3
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/3.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/3.mp3', 'audio/mp3'))
   when 4
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/4.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/4.mp3', 'audio/mp3'))
   when 5
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/5.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/5.mp3', 'audio/mp3'))
   when 6
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/6.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/6.mp3', 'audio/mp3'))
   when 7
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/7.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/7.mp3', 'audio/mp3'))
   when 8
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/8.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/8.mp3', 'audio/mp3'))
   when 9
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/9.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/9.mp3', 'audio/mp3'))
   when 10
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/10.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/10.mp3', 'audio/mp3'))
   when 11
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/11.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/11.mp3', 'audio/mp3'))
   when 12
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/12.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/12.mp3', 'audio/mp3'))
   when 13
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/13.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/13.mp3', 'audio/mp3'))
   when 14
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/14.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/14.mp3', 'audio/mp3'))
   when 15
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/15.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/15.mp3', 'audio/mp3'))
   when 16
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/16.mp3', 'audio/mp3'))
+  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/16.mp3', 'audio/mp3'))
   when 17
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/17.mp3', 'audio/mp3'))
+  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/17.mp3', 'audio/mp3'))
   when 18
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/18.mp3', 'audio/mp3'))
+  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/18.mp3', 'audio/mp3'))
   when 19
-  bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/19.mp3', 'audio/mp3'))
+  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/19.mp3', 'audio/mp3'))
   end
 end
 
 #SEZIONE VOCALIZZI
 if message.text.to_s.include?("vocalizz")
-bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/vocalizzi.mp3', 'audio/mp3'))
+bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/vocalizzi.mp3', 'audio/mp3'))
 end
 if message.text.to_s.include?("fuori")
-bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/fuori.mp3', 'audio/mp3'))
+bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/fuori.mp3', 'audio/mp3'))
 end
 if message.text.to_s.include?("atis")||message.text.to_s.include?("rack")||message.text.to_s.include?("raccato")||message.text.to_s.include?("ownload")||message.text.to_s.include?("torrent")
-bot.api.send_audio(chat_id: message.chat.id, audio: Faraday::UploadIO.new('/home/vascobot/eeh/delinquenti.mp3', 'audio/mp3'))
+bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/delinquenti.mp3', 'audio/mp3'))
 end
 
  end
