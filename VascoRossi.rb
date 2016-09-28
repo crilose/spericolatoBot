@@ -86,7 +86,7 @@ Telegram::Bot::Client.run(token) do |bot|
 #SEZIONE SAGGEZZA
 
 	if message.text.to_s.include?("aggezza")|| message.text.to_s.include?("erla")
-     case Random.rand(1...10)
+     case Random.rand(1...11)
       when 1
       bot.api.send_message(chat_id: message.chat.id, text: 'Io non voglio più vivere solo per fare compagnia! EEEEH...noo...per compagn..ehh')
       when 2
@@ -111,10 +111,31 @@ Telegram::Bot::Client.run(token) do |bot|
 
       when 9
       bot.api.send_message(chat_id: message.chat.id, text: 'Quando andavo in cantina a préndere il vinooh cantavoo.. pérché avevo paura del buioh..eccoh, sono sémpre uguàlehh..continuohh a bere il vinooh....eeh già...hahhaaa il folle jack...')
+
       end
     end
+#SEZIONE COSA FA VASCO
+	if message.text.to_s.include?("osa")&&message.text.to_s.include?("fatto oggi?")
+	case Random.rand(1...3)
+	when 1
+	bot.api.send_message(chat_id: message.chat.id, text: 'Oggiiiihh... è passatoohh Fabio Volo... mi ha fatto fààre una còsa ...cheee.. non ho capito ma... ci siamohh.. divertitihh...!!!')
+	end
+	end
 
+#SEZIONE VASCO TI PIACE
 
+	if message.text.to_s.include?("iace")&&message.text.to_s.include?("?")
+	case Random.rand(1...5)
+	when 1
+	bot.api.send_message(chat_id: message.chat.id, text: 'Maah...cééertoohh....sììì...assoluttha...thamneenteeh..eeeehhh')
+	when 2
+	bot.api.send_message(chat_id: message.chat.id, text: 'Nooh...eehhhh...assolutthma....noooohh')
+	when 3
+	bot.api.send_message(chat_id: message.chat.id, text: 'Maah..guahhdrda.....probababi...bhabilmnettteeeeh...foooorsehhhh')
+	when 4
+	bot.api.send_message(chat_id: message.chat.it, text: 'Iooh....non..nnoonn...saprehehii....non sapreeehi...')
+	end
+	end
 #SEZIONE DOMANDE E RISPOSTE
 	if message.text.to_s.include?("asco")&& message.text.to_s.include?("sei")&& message.text.to_s.include?("?")
 	case Random.rand(1...6)
@@ -126,7 +147,7 @@ Telegram::Bot::Client.run(token) do |bot|
 	bot.api.send_message(chat_id: message.chat.id, text: 'Ma cioèèèh..ovviaméente noo..mi sémbra paleese..chiarocioèheh..')
         when 4
         bot.api.send_message(chat_id: message.chat.id, text: 'Cértamentheeeh..é chiaroo...EEHHH..cérto céertoohh..aaaahhh..')
-        when 4
+        when 5
         bot.api.send_message(chat_id: message.chat.id, text: 'Maahssolutament...assoluthament...enooohh....eeeh..come pénsi una cossh..similee...')
 	end
 	end
@@ -186,6 +207,12 @@ end
 #SEZIONE CITAZIONI CANZONI
   if message.text.to_s.include?("senso")&& message.text.to_s.include?("vita")
     bot.api.send_message(chat_id: message.chat.id, text: 'Maah un séééénsooo queéèsta vitaaa..un séééénsoohh non ce laaaaahhhhhaaaaahhh.....')
+  end
+  if message.text.to_s.include?("anzone")&&message.text.to_s.include?("per me")
+    bot.api.send_message(chat_id: message.chat.id, text: message.from.first_name + ' una canzòne per tèèh.....non te l aspettavii ehh....ehh..')
+  end
+  if message.text.to_s.include?("ove")&&message.text.to_s.include?("vai")
+    bot.api.send_message(chat_id: message.chat.id, text: 'Vaadoohh in Mèèssiccooooooo......vadooh al massimooohh in Mèèssiccoooohh....eeeeeehhhh')
   end
 
 
