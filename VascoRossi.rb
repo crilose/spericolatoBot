@@ -6,13 +6,6 @@ token = '223983734:AAFGFv2tJplQgNN1ICGnuXCqTd-c3eQ8AlY'
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
 
-#SEZIONE MESSAGGI AUTOMATICI
-
-
-
-
-
-
 #SEZIONE DEI CLIPPINIII
      if message.text.to_s.include?("clippino")
 	 case Random.rand(1...9)
@@ -48,7 +41,7 @@ Telegram::Bot::Client.run(token) do |bot|
 	bot.api.send_message(chat_id: message.chat.id, text: 'EEEEEhhhh...ciao..ciao..ehmm..io sono Vàsco...piacgehre!')
     end
 
-	if message.text.to_s.include?("ciao") || message.text.to_s.include?("ehi") || message.text.to_s.include?("we")
+	if message.text.to_s.include?("iao") || message.text.to_s.include?("ehi") || message.text.to_s.include?("we")
 	   case Random.rand(1...6)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Ciao grandisssimooheeeh...aaaahhh!')
@@ -63,7 +56,7 @@ Telegram::Bot::Client.run(token) do |bot|
     end
 	end
 
-	if message.text.to_s.include?("buonasera")
+	if message.text.to_s.include?("uonasera")
 	case Random.rand(1...3)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Buonasèèra! Buonaeesheraa...ooohhh!')
@@ -72,7 +65,7 @@ Telegram::Bot::Client.run(token) do |bot|
     end
 	end
 
-	if message.text.to_s.include?("buongiorno")
+	if message.text.to_s.include?("uongiorno")
 	case Random.rand(1...3)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Buonggiooornoo! Buooongioòreeehno...ooohhh!')
@@ -92,7 +85,7 @@ Telegram::Bot::Client.run(token) do |bot|
 
 #SEZIONE SAGGEZZA
 
-	if message.text.to_s.include?("saggezza")|| message.text.to_s.include?("perla")
+	if message.text.to_s.include?("aggezza")|| message.text.to_s.include?("erla")
      case Random.rand(1...10)
       when 1
       bot.api.send_message(chat_id: message.chat.id, text: 'Io non voglio più vivere solo per fare compagnia! EEEEH...noo...per compagn..ehh')
@@ -138,7 +131,7 @@ Telegram::Bot::Client.run(token) do |bot|
 	end
 	end
 
-	if message.text.to_s.include?("asco")&&message.text.to_s.include?("che")&&message.text.to_s.include?("ne")&&message.text.to_s.include?("pensi")
+	if message.text.to_s.include?("asco")&&message.text.to_s.include?("pensi")
 	case Random.rand(1...5)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Maahh...guhardaah...' + message.from.first_name + 'ioooh...péénsooh..iooh pensoo?')
@@ -153,7 +146,7 @@ Telegram::Bot::Client.run(token) do |bot|
 
 #SEZIONE INSULTI
 	if message.text.to_s.include?("asco")
-		if message.text.to_s.include?("tronzo")||message.text.to_s.include?("oglione")||message.text.to_s.include?("pirla")||message.text.include?("drogato")||message.text.to_s.include?("scemo")|| message.text.to_s.include?("imbecille")||message.text.to_s.include?("anculo")||message.text.to_s.include?("rocio")||message.text.to_s.include?("gay")||message.text.to_s.include?("fallito")||message.text.to_s.include?("erda")
+		if message.text.to_s.include?("tronzo")||message.text.to_s.include?("oglione")||message.text.to_s.include?("pirla")||message.text.include?("drogato")||message.text.to_s.include?("scemo")|| message.text.to_s.include?("imbecille")||message.text.to_s.include?("anculo")||message.text.to_s.include?("rocio")||message.text.to_s.include?("gay")||message.text.to_s.include?("fallito")||message.text.to_s.include?("erda")||message.text.to_s.include?("pezzente")||message.text.to_s.include?("figlio di")
 			case Random.rand(1...4)
 			when 1
 			bot.api.send_message(chat_id: message.chat.id, text: 'Ceeehhh..maa...io ti pare ché.....mi facchgs trattAAAre...così da té...tu nonhaiucapito...un cazzoo..')
@@ -163,12 +156,22 @@ Telegram::Bot::Client.run(token) do |bot|
 			bot.api.send_message(chat_id: message.chat.id, text: 'Ma vai afaraheee....eeh...in culo cioè cioè io....io ho vissuuuuto negl ann..eeeeeeh...io non mi faccccghh minacciaaahhhre....cosìì....')
 			end
 		end
+		if message.text.to_s.include?("nsulta")
+		case Random.rand(1...4)
+		when 1
+		bot.api.send_message(chat_id: message.chat.id, text: message.text.to_s.split.last + ' sééih.. un figlio di troiahhh')
+		when 2
+		bot.api.send_message(chat_id: message.chat.id, text: 'Eeeh...beeh...ch dììre....' + message.text.to_s.split.last + ' sèèi..un cogliòòne...daih..')
+		when 3
+		bot.api.send_message(chat_id: message.chat.id, text: message.text.to_s.split.last + ' ma perchgh...perchéè non vààihhh...a caghareeeééh? Pezzzzohh..di méérd..merrdaa..hh..oooohh')
+		end
+		end
 	end
 
 #SEZIONE COME STAI
 
 if message.text.to_s.include?("asco")
-  if message.text.to_s.include?("ome stai")||message.text.to_s.include?("ome va")||message.text.to_s.include?("utto bene")||message.text.include?("ome butta")||message.text.to_s.include?("stai bene")|| message.text.to_s.include?("a posto")||message.text.to_s.include?("com'è")||message.text.to_s.include?("ttapposto")
+  if message.text.to_s.include?("ome stai")||message.text.to_s.include?("ome va")||message.text.to_s.include?("utto bene")||message.text.include?("ome butta")||message.text.to_s.include?("tai bene")|| message.text.to_s.include?("a posto")||message.text.to_s.include?("om'è")||message.text.to_s.include?("ttapposto")
     case Random.rand(1...4)
     when 1
     bot.api.send_message(chat_id: message.chat.id, text: 'Eeeeeh....tutto bééne...piuohmhneo.....ahehhhhh')
@@ -207,7 +210,7 @@ end
 
 #SEZIONE EEEEEH
 
-if message.text.to_s.include?("eh")||message.text.to_s.include?("urlo")||message.text.to_s.include?("urla")||message.text.to_s.include?("motiva")||message.text.to_s.include?("hh")
+if message.text.to_s.include?("eh")||message.text.to_s.include?("rlo")||message.text.to_s.include?("rla")||message.text.to_s.include?("otiva")||message.text.to_s.include?("hh")
   case Random.rand(1...21)
   when 1
   bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/1.mp3', 'audio/mp3'))
@@ -240,18 +243,18 @@ if message.text.to_s.include?("eh")||message.text.to_s.include?("urlo")||message
   when 15
   bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/15.mp3', 'audio/mp3'))
   when 16
-  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/16.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/16.mp3', 'audio/mp3'))
   when 17
-  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/17.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/17.mp3', 'audio/mp3'))
   when 18
-  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/18.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/18.mp3', 'audio/mp3'))
   when 19
-  bot.api.send_audio(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/19.mp3', 'audio/mp3'))
+  bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/19.mp3', 'audio/mp3'))
   end
 end
 
 #SEZIONE VOCALIZZI
-if message.text.to_s.include?("vocalizz")
+if message.text.to_s.include?("vocalizz")||message.text.to_s.include?("anta")
 bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/vocalizzi.mp3', 'audio/mp3'))
 end
 if message.text.to_s.include?("fuori")
@@ -260,6 +263,22 @@ end
 if message.text.to_s.include?("atis")||message.text.to_s.include?("rack")||message.text.to_s.include?("raccato")||message.text.to_s.include?("ownload")||message.text.to_s.include?("torrent")
 bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/delinquenti.mp3', 'audio/mp3'))
 end
+
+#SEZIONE CONSIGLI PER GLI ACQUISTI
+if message.text.to_s.include?("onsigl")&&message.text.to_s.include?("alcol")
+case Random.rand(1...6)
+	when 1
+	bot.api.send_message(chat_id: message.chat.id, text: message.from.first_name + ' per téé oggiih....uuna...birraahhh..buòòòòna la biiirraah')
+	when 2
+	bot.api.send_message(chat_id: message.chat.id, text: message.from.first_name + ' per tèèè oggiih...unna...bella sambuuucaahhhh...siiiih')
+	when 3
+	bot.api.send_message(chat_id: message.chat.id, text: message.from.first_name + ' per tèè oggiih...un..grappiinoohhh...GRAPPINOOH')
+	when 4
+	bot.api.send_message(chat_id: message.chat.id, text: message.from.first_name + ' per tèè carooh..oggiih...un jagerehha...jaherga...jager quellahh robaa lààà ìnsòmmaaah..')
+	when 5
+	bot.api.send_message(chat_id: message.chat.id, text: message.from.frist_name + ' per tèèè amicoohmioh...oggiihh..un limòòncellooohh')
+end
+end 
 
  end
 
