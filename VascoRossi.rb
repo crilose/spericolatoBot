@@ -119,13 +119,20 @@ Telegram::Bot::Client.run(token) do |bot|
 	case Random.rand(1...3)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Oggiiiihh... è passatoohh Fabio Volo... mi ha fatto fààre una còsa ...cheee.. non ho capito ma... ci siamohh.. divertitihh...!!!')
+	when 2
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/lasciatoandare.mp3', 'audio/mp3'))
 	end
 	end
 
+#SEZIONE VASCO TI COMPORTI MALE
+
+	if message.text.to_s.include?("omport")||message.text.to_s.include?("evi")||message.text.to_s.include?("on devi")
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/comporto.mp3', 'audio/mp3'))
+	end
 #SEZIONE VASCO TI PIACE
 
 	if message.text.to_s.include?("iace")&&message.text.to_s.include?("?")
-	case Random.rand(1...5)
+	case Random.rand(1...6)
 	when 1
 	bot.api.send_message(chat_id: message.chat.id, text: 'Maah...cééertoohh....sììì...assoluttha...thamneenteeh..eeeehhh')
 	when 2
@@ -133,8 +140,14 @@ Telegram::Bot::Client.run(token) do |bot|
 	when 3
 	bot.api.send_message(chat_id: message.chat.id, text: 'Maah..guahhdrda.....probababi...bhabilmnettteeeeh...foooorsehhhh')
 	when 4
-	bot.api.send_message(chat_id: message.chat.it, text: 'Iooh....non..nnoonn...saprehehii....non sapreeehi...')
+	bot.api.send_message(chat_id: message.chat.id, text: 'Iooh....non..nnoonn...saprehehii....non sapreeehi...')
+	when 5
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/yeah.mp3', 'audio/mp3'))
 	end
+	end
+
+	if message.text.to_s.include?("iace")&&message.text.to_s.include?("nutella")
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/nutella.mp3', 'audio/mp3'))
 	end
 #SEZIONE DOMANDE E RISPOSTE
 	if message.text.to_s.include?("asco")&& message.text.to_s.include?("sei")&& message.text.to_s.include?("?")
@@ -163,6 +176,18 @@ Telegram::Bot::Client.run(token) do |bot|
 	when 4
 	bot.api.send_message(chat_id: message.chat.id, text: 'Guardh...non sono....neanchege..in gradoo..di pensàààre...cioèèhh, hai capiitooh noo?')
 	end
+	end
+
+	if message.text.to_s.include?("aial")||message.text.to_s.include?("rugni")
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/grugnito.mp3', 'audio/mp3'))
+	end
+
+	if message.text.to_s.include?("cappello")
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/cappello.mp3', 'audio/mp3'))
+	end
+
+	if message.text.to_s.include?("fumi")||message.text.to_s.include?("fumare")||message.text.to_s.include?("sigarette")||message.text.to_s.include?("sigaretta")
+	bot.api.send_voice(chat_id: message.chat.id, voice: Faraday::UploadIO.new('/home/vascobot/eeh/fumare.mp3', 'audio/mp3'))
 	end
 
 #SEZIONE INSULTI
@@ -305,8 +330,19 @@ case Random.rand(1...6)
 	when 5
 	bot.api.send_message(chat_id: message.chat.id, text: message.from.frist_name + ' per tèèè amicoohmioh...oggiihh..un limòòncellooohh')
 end
-end 
+end
 
+#SEZIONE IMMAGINI
+  if message.text.to_s.include?("atti vedere")||message.text.to_s.include?("foto")||message.text.to_s.include?("esciti")||message.text.to_s.include?("palesati")
+    case Random.rand(1...4)
+    when 1
+      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new('/home/vascobot/eeh/img1.jpg', 'image/jpg'), caption: 'Eeeh...vedììh..stoòò..controllandoohh i miééii..contiddhuu..un po'' eeh...ehh')
+    when 2
+      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new('/home/vascobot/eeh/img2.jpg', 'image/jpg'), caption: 'Eehh...quandhhd...quandooh..prudeeh..prudeeh')
+    when 3
+      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new('/home/vascobot/eeh/img3.jpg', 'image/jpg'), caption: 'Eeeh...ho appenaahh...VIISTOoh..la madonnahh..ragazziii....dopo la dòòcciaah...eeeh')
+    end
  end
 
+end
 end
