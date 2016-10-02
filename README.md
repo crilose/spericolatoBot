@@ -7,10 +7,7 @@
 	<meta name="created" content="20161002;162604695461082">
 	<meta name="changed" content="20161002;163351317395068">
 	<style type="text/css">
-	<!--
-		@page { margin: 2cm }
-		p { margin-bottom: 0.25cm; line-height: 120% }
-	-->
+	
 	</style>
 </head>
 <body lang="it-IT" dir="ltr">
