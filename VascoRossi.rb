@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # encoding: utf-8
 require 'telegram/bot'
-token = '223983734:AAFGFv2tJplQgNN1ICGnuXCqTd-c3eQ8AlY'
+token = 'il tuo token qui'
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
