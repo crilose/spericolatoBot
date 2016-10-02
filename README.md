@@ -6,9 +6,6 @@
 	<meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
 	<meta name="created" content="20161002;162604695461082">
 	<meta name="changed" content="20161002;163351317395068">
-	<style type="text/css">
-	
-	</style>
 </head>
 <body lang="it-IT" dir="ltr">
 <p style="margin-bottom: 0cm; line-height: 100%"><font size="6" style="font-size: 22pt"><b>SpericolatoBot</b></font></p>
