@@ -93,8 +93,7 @@ maiale</b> - Vasco emetterà un grugnito </font>
 dirà cosa ne pensa sul suo cappello </font>
 </p>
 <p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
-<font size="4" style="font-size: 14pt"><b>vasco sei
-stronzo/cretino/drogato/fallito/altro insulto</b> - Vasco ti
+<font size="4" style="font-size: 14pt"><b>vasco sei *insulto*</b> - Vasco ti
 insulterà a sua volta </font>
 </p>
 <p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
